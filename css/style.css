@@ -1,0 +1,288 @@
+/* CORES PRÉ DEFINIDAS=========================================================================== */
+:root {
+  --primary: rgb(35, 35, 91);
+  --secondary: rgb(106, 124, 197);
+  --dark: rgb(21, 33, 62);
+  --light: #f5f5f5;
+  --acent: rgb(255, 252, 62);
+  --font-title: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --font-text: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* RESET BASICO ==================================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CORPO E TÍTULOS ============================================================================== */
+body {
+  font-family: var(--font-text);
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--primary);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+/* CABEÇALHO ===============================================================================*/
+header {
+  
+  width: 100%;
+  z-index: 1000;
+  color: white;
+  background-color: var(--dark);
+  top:0;
+  left: 0;
+}
+
+.navbar {
+  display: flex;
+  position: static;
+}
+
+.logo {
+  padding-left: 80px;
+  align-content: center;
+  display: flex;
+  margin-top: 0;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.logo h2 {
+  padding-left: 10px;
+  text-align: justify;
+  align-content: end;
+}
+
+.nav_itens {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 400px;
+  list-style: none;
+  font-family: var(--font-title);
+  margin-right: 70px;
+}
+
+.nav_itens a {
+  color: var(--light);
+  gap: 20rem;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 5px;
+  align-content: end;
+  font-size: medium;
+}
+
+/* novidades */
+.container {
+  background-color: var(--light);
+  align-items: center;
+}
+
+.title-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.grid-novid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.nov-img {
+  margin-top: 15px;
+  text-align: center;
+  margin-left: 15px;
+}
+
+.nov-txt {
+  margin-left: 70px;
+  margin-right: 15px;
+}
+
+/* FIM NOVIDADES */
+
+/* CARDS */
+section {
+  display: block;
+  min-height: auto;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  align-content: center;
+  ;
+  color: white;
+  background-color: #b41111;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+/* RODAPÉ */
+footer {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  align-content: end;
+}
+
+a {
+  text-decoration: none;
+  font-size: 19px;
+  color: var(--light);
+  align-content: end;
+}
+
+.grid-footer {
+  background-color: var(--dark);
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+.grid-footer-itens ,
+.grid-footer-itens-redes {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.grid-footer-itens ul {
+    background-color: var(--dark);
+  list-style-type: none;
+}
+.grid-footer-itens-redes ul {
+  background-color: var(--dark);
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  list-style-type: none;
+  
+}
+
+.logo-footer {
+    background-color: var(--dark);
+  justify-content: center;
+}
+
+/* SLIDER E CARDS */
+.slider-container-movie,
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.slider-control {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* CARDS PADRÃO*/
+.card,
+.card-movie {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 0 0 23%;
+  background-color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* CARDS DO FILME */
+.card-movie {
+  height: 380px; 
+}
+
+/* IMAGENS DOS CARDS DO FILMES */
+.card-movie img {
+  width: 100%;
+  height: 200px;         
+  object-fit: contain;   
+  background-color: #fff; 
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+
+/* IMAGENS DOS CARDS PADRÃO*/
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* BOTÕES PREV E NEXT */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  z-index: 100;
+  user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
